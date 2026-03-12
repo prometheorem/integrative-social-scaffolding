@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: '/integrative-social-scaffolding/postureforge',
+  basePath: '/integrative-social-scaffolding/postureforge',
 };
 
 export default nextConfig;
