@@ -69,7 +69,8 @@ function AnatomyStructure({ structure, tag, isSelected, onClick }: AnatomyStruct
           </>
         );
       case 'joint':
-        return <boxGeometry args={structure.scale || [0.15, 0.15, 0.15]} />;
+        const scale = structure.scale as [number, number, number] || [0.15, 0.15, 0.15];
+        return <boxGeometry args={scale} />;
       default:
         return <sphereGeometry args={[0.1, 16, 16]} />;
     }
